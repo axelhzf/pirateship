@@ -2,7 +2,7 @@
     "name" : "PirateShip",
     "description" : "Piratebay scrapper",
     "author" : "Axel Hernández Ferrera <axelhzf@gmail.com>",
-    "version" : "1.0",
+    "version" : "1.0.0",
     "dependencies" : {
         "underscore" : "*",
         "jquery" : "~1.8.3",
