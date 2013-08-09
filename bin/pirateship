@@ -1,33 +1,8 @@
-#!/usr/bin/env coffee
+#!/usr/bin/env node
 
-path = require 'path'
-fs = require 'fs'
-prompt = require 'prompt'
-exec = require('child_process').exec
-lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib')
+path = require('path');
+fs = require('fs');
+lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
+cli = require(lib + '/pirateship-cli');
 
-pirateship = require(lib + '/pirateship')
-
-argv = require('optimist')
-    .usage('Usage: $0 -q [string]')
-    .demand(['q'])
-    .argv
-
-exitIfError = (error) =>
-    if (error)
-        console.log error
-        process.exit(1);
-
-pirateship.find argv.q, (err, torrents) ->
-    exitIfError(err)
-
-    torrents.forEach (torrent, index) ->
-        console.log("#{index}) #{torrent.title}")
-
-    prompt.start()
-    prompt.get ['index'], (err, result) ->
-        if(!err)
-            result.index.split(" ").forEach (index) ->
-                cmd = 'ssh imac "open /Applications/uTorrent.app ' + torrents[index].link + '"'
-                console.log cmd
-                exec cmd
+cli.prompt();
