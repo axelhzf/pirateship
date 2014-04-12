@@ -6,7 +6,7 @@ TITLE_PREFIX = 'Details for '
 
 exports.find = (q, cb) ->
     encodeQuery = encodeURIComponent(q)
-    url = 'http://thepiratebay.sx/search/' + encodeQuery + '/0/7/0'
+    url = 'http://thepiratebay.se/search/' + encodeQuery + '/0/7/0'
     options =
         url: url,
         headers:
