@@ -16,5 +16,5 @@
   "scripts": {
     "test": "mocha test"
   },
-  "main": "./lib/pirateship"
+  "main": "./src/pirateship"
 }
