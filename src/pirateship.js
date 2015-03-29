@@ -32,11 +32,11 @@ exports.find = function (q, cb) {
 
       var titles = $('.detName a').map(function (i, a) {
         return a.attribs.title.substring(TITLE_PREFIX.length);
-      });
+      }).get();
 
       var links = $('#searchResult a[title="Download this torrent using magnet"]').map(function (i, magnet) {
         return magnet.attribs.href;
-      });
+      }).get();
 
       var parseTd = function (i, td) {
         return td.children[0].data;
