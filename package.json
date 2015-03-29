@@ -4,22 +4,17 @@
   "author": "Axel Hernández Ferrera <axelhzf@gmail.com>",
   "version": "1.0.0",
   "dependencies": {
-    "underscore": "*",
     "cheerio": "~0.11.0",
-    "request": "~2.21.0",
-    "prompt": "~0.2.9",
     "optimist": "~0.5.0",
-    "coffee-script": "^1.7.1"
+    "prompt": "~0.2.9",
+    "request": "~2.21.0"
   },
   "devDependencies": {
     "chai": "~1.7.2",
-    "mocha": "~1.12.0",
-    "grunt-contrib-coffee": "~0.7.0",
-    "grunt": "~0.4.1",
-    "grunt-contrib-watch": "~0.5.1"
+    "mocha": "~1.12.0"
   },
   "scripts": {
-    "test": "mocha test --compilers coffee:coffee-script/register"
+    "test": "mocha test"
   },
   "main": "./lib/pirateship"
 }

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-path = require('path');
-fs = require('fs');
-lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
-cli = require(lib + '/pirateship-cli');
+var path = require('path');
+var fs = require('fs');
+var lib = path.join(path.dirname(fs.realpathSync(__filename)), '../src');
+var cli = require(lib + '/pirateship-cli');
 
 cli.prompt();
