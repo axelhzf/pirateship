@@ -7,7 +7,7 @@ var TITLE_PREFIX = 'Details for ';
 exports.find = function (q, cb) {
   var encodeQuery = encodeURIComponent(q);
 
-  var url = 'http://baytorrent.nl/search/' + encodeQuery + '/0/7/0';
+  var url = 'https://pirateproxy.sx/search/' + encodeQuery + '/0/7/0';
 
   var options = {
     url: url,
